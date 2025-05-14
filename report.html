@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Nationale - Signaler un incident</title>
+    <link rel="stylesheet" href="css/report.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Même en-tête que index.html -->
+    
+    <main class="report-main">
+        <section class="report-header">
+            <h1>Signaler un incident</h1>
+            <div class="report-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p><strong>Attention :</strong> Ce formulaire est destiné aux signalements ne nécessitant pas une intervention immédiate. En cas d'urgence, composez le 17 ou le 112.</p>
+            </div>
+        </section>
+
+        <section class="report-steps">
+            <div class="steps-progress">
+                <div class="step active">1. Type d'incident</div>
+                <div class="step">2. Détails</div>
+                <div class="step">3. Vos informations</div>
+                <div class="step">4. Confirmation</div>
+            </div>
+        </section>
+
+        <section class="report-form-section">
+            <form class="report-form">
+                <fieldset>
+                    <legend>Type d'incident</legend>
+                    <div class="incident-types">
+                        <label class="incident-card">
+                            <input type="radio" name="incident-type" value="theft" required>
+                            <div class="card-content">
+                                <i class="fas fa-burglar"></i>
+                                <h3>Vol ou cambriolage</h3>
+                            </div>
+                        </label>
+                        <label class="incident-card">
+                            <input type="radio" name="incident-type" value="vandalism">
+                            <div class="card-content">
+                                <i class="fas fa-spray-can"></i>
+                                <h3>Dégradation</h3>
+                            </div>
+                        </label>
+                        <label class="incident-card">
+                            <input type="radio" name="incident-type" value="scam">
+                            <div class="card-content">
+                                <i class="fas fa-fraud"></i>
+                                <h3>Arnaque ou escroquerie</h3>
+                            </div>
+                        </label>
+                        <label class="incident-card">
+                            <input type="radio" name="incident-type" value="harassment">
+                            <div class="card-content">
+                                <i class="fas fa-user-shield"></i>
+                                <h3>Harcèlement</h3>
+                            </div>
+                        </label>
+                        <label class="incident-card">
+                            <input type="radio" name="incident-type" value="traffic">
+                            <div class="card-content">
+                                <i class="fas fa-car-crash"></i>
+                                <h3>Infraction routière</h3>
+                            </div>
+                        </label>
+                        <label class="incident-card">
+                            <input type="radio" name="incident-type" value="other">
+                            <div class="card-content">
+                                <i class="fas fa-question-circle"></i>
+                                <h3>Autre</h3>
+                            </div>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <div class="form-navigation">
+                    <button type="button" class="next-btn">Suivant <i class="fas fa-arrow-right"></i></button>
+                </div>
+            </form>
+        </section>
+
+        <section class="report-info">
+            <h2>Que se passe-t-il après votre signalement ?</h2>
+            <div class="info-steps">
+                <div class="info-step">
+                    <div class="step-number">1</div>
+                    <p>Vous recevez un accusé de réception par email avec un numéro de dossier</p>
+                </div>
+                <div class="info-step">
+                    <div class="step-number">2</div>
+                    <p>Votre signalement est analysé par nos services</p>
+                </div>
+                <div class="info-step">
+                    <div class="step-number">3</div>
+                    <p>Un officier de police peut vous contacter pour plus d'informations</p>
+                </div>
+                <div class="info-step">
+                    <div class="step-number">4</div>
+                    <p>Vous serez informé de la suite donnée à votre signalement</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Même pied de page que index.html -->
+</body>
+</html>

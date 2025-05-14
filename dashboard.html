@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Nationale - Tableau de bord</title>
+    <link rel="stylesheet" href="css/secure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="secure-dashboard">
+    <header class="secure-header">
+        <div class="header-left">
+            <img src="image/logo police.jpg" alt="Logo Police" class="logo-small">
+            <h1>PORTAL INTERNE</h1>
+        </div>
+        <div class="header-right">
+            <div class="user-info">
+                <span class="badge-id">BADGE: X45892</span>
+                <span class="user-name">Officier: DUPONT Jean</span>
+                <span class="user-rank">Brigadier</span>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn"><i class="fas fa-bell"></i></button>
+                <button class="header-btn"><i class="fas fa-envelope"></i></button>
+                <button class="header-btn logout-btn"><i class="fas fa-sign-out-alt"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="secure-container">
+        <nav class="secure-sidebar">
+            <ul class="secure-menu">
+                <li class="active">
+                    <a href="#"><i class="fas fa-tachometer-alt"></i> Tableau de bord</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-list"></i> Mes interventions</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-database"></i> Bases de données</a>
+                    <ul class="submenu">
+                        <li><a href="#">Fichier national</a></li>
+                        <li><a href="#">Véhicules</a></li>
+                        <li><a href="#">Antécédents</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-file-alt"></i> Rapports</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-map-marked-alt"></i> Cartographie</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-comments"></i> Communication</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-cog"></i> Administration</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="secure-content">
+            <div class="secure-banner">
+                <i class="fas fa-shield-alt"></i>
+                <p>Niveau de sécurité: CONFIDENTIEL - Ne pas diffuser en dehors du service</p>
+            </div>
+
+            <section class="dashboard-section">
+                <h2 class="section-title">Tableau de bord</h2>
+                
+                <div class="dashboard-cards">
+                    <div class="dash-card alert-card">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Alertes en cours</h3>
+                        <div class="alert-item critical">
+                            <span>3 alertes critiques</span>
+                            <a href="#" class="view-link">Voir</a>
+                        </div>
+                        <div class="alert-item major">
+                            <span>5 alertes majeures</span>
+                            <a href="#" class="view-link">Voir</a>
+                        </div>
+                        <div class="alert-item minor">
+                            <span>2 alertes mineures</span>
+                            <a href="#" class="view-link">Voir</a>
+                        </div>
+                    </div>
+
+                    <div class="dash-card stats-card">
+                        <h3><i class="fas fa-chart-line"></i> Statistiques secteur</h3>
+                        <div class="stat-item">
+                            <div class="stat-value">12</div>
+                            <div class="stat-label">Interventions 24h</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">-8%</div>
+                            <div class="stat-label">Délinquance (mois)</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Dossiers en cours</div>
+                        </div>
+                    </div>
+
+                    <div class="dash-card quick-card">
+                        <h3><i class="fas fa-bolt"></i> Accès rapide</h3>
+                        <div class="quick-buttons">
+                            <button class="quick-btn"><i class="fas fa-user-secret"></i> Fiche suspect</button>
+                            <button class="quick-btn"><i class="fas fa-car"></i> Vérif. véhicule</button>
+                            <button class="quick-btn"><i class="fas fa-file-import"></i> Nouveau rapport</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="grid-item interventions">
+                        <h3><i class="fas fa-list"></i> Dernières interventions</h3>
+                        <table class="secure-table">
+                            <thead>
+                                <tr>
+                                    <th>N°</th>
+                                    <th>Type</th>
+                                    <th>Heure</th>
+                                    <th>Statut</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>INT-2023-0452</td>
+                                    <td>Alarme commerce</td>
+                                    <td>14:23</td>
+                                    <td><span class="status pending">En cours</span></td>
+                                </tr>
+                                <tr>
+                                    <td>INT-2023-0451</td>
+                                    <td>Accident VL</td>
+                                    <td>11:47</td>
+                                    <td><span class="status closed">Clôturé</span></td>
+                                </tr>
+                                <tr>
+                                    <td>INT-2023-0450</td>
+                                    <td>Plainte vol</td>
+                                    <td>09:15</td>
+                                    <td><span class="status in-progress">Traitement</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="grid-item messages">
+                        <h3><i class="fas fa-envelope"></i> Messages récents</h3>
+                        <div class="message-list">
+                            <div class="message-item unread">
+                                <div class="message-sender">Cdt. Martin</div>
+                                <div class="message-title">Réunion secteur</div>
+                                <div class="message-time">10:30</div>
+                            </div>
+                            <div class="message-item">
+                                <div class="message-sender">Système</div>
+                                <div class="message-title">Mise à jour procédure</div>
+                                <div class="message-time">Hier</div>
+                            </div>
+                            <div class="message-item">
+                                <div class="message-sender">Brigade financière</div>
+                                <div class="message-title">Demande info dossier #4582</div>
+                                <div class="message-time">15/05</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="secure-footer">
+        <p>Système sécurisé PN v3.4.2 - © 2023 Police Nationale</p>
+        <p>Dernière connexion: 16/05/2023 14:23 depuis IP: 192.168.45.12</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* wanted.css - Styles spécifiques à la page Personnes recherchées */
+
+.wanted-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.wanted-header h1 {
+    color: #1a2a6c;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.wanted-header p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+}
+
+.wanted-warning {
+    background-color: #ffebee;
+    border-left: 4px solid #d32f2f;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wanted-warning i {
+    color: #d32f2f;
+    font-size: 1.5rem;
+}
+
+.wanted-filters {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.wanted-filters h2 {
+    color: #1a2a6c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-options select {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.filter-btn {
+    background-color: #1a2a6c;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.wanted-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.wanted-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    transition: transform 0.3s;
+}
+
+.wanted-card:hover {
+    transform: translateY(-5px);
+}
+
+.wanted-image {
+    position: relative;
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.wanted-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wanted-status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.wanted-status.critical {
+    background-color: rgba(211, 47, 47, 0.9);
+}
+
+.wanted-status.major {
+    background-color: rgba(255, 143, 0, 0.9);
+}
+
+.wanted-info {
+    padding: 1.5rem;
+    flex: 1;
+}
+
+.wanted-info h3 {
+    color: #1a2a6c;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.wanted-age, .wanted-location {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.wanted-description {
+    margin: 1rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.wanted-contact {
+    margin-top: 1.5rem;
+}
+
+.wanted-contact p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #d32f2f;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.contact-btn:hover {
+    background-color: #b71c1c;
+}
+
+.info-btn {
+    display: inline-block;
+    color: #1a2a6c;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.wanted-tips {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.wanted-tips h2 {
+    color: #1a2a6c;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.tips-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tips-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.tips-list li i {
+    color: #1a2a6c;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .wanted-header h1 {
+        font-size: 2rem;
+    }
+    
+    .wanted-card {
+        flex-direction: column;
+    }
+    
+    .wanted-image {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .filter-options select {
+        min-width: 100%;
+    }
+    
+    .filter-btn {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}

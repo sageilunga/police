@@ -1,0 +1,219 @@
+/* report.css - Styles spécifiques à la page de signalement */
+
+.report-main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.report-header h1 {
+    color: #1a2a6c;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.report-warning {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.report-warning i {
+    color: #ff8f00;
+    font-size: 1.5rem;
+}
+
+.report-steps {
+    margin-bottom: 3rem;
+}
+
+.steps-progress {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.steps-progress::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ddd;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    background-color: #ddd;
+    color: #666;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.step.active {
+    background-color: #1a2a6c;
+    color: white;
+}
+
+.report-form-section {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.report-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.report-form legend {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a2a6c;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+
+.incident-types {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.incident-card {
+    cursor: pointer;
+}
+
+.incident-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+.card-content {
+    background-color: #f8f9fa;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.incident-card input:checked + .card-content {
+    border-color: #1a2a6c;
+    background-color: #e3f2fd;
+}
+
+.incident-card:hover .card-content {
+    border-color: #90caf9;
+}
+
+.card-content i {
+    font-size: 2.5rem;
+    color: #1a2a6c;
+    margin-bottom: 1rem;
+}
+
+.card-content h3 {
+    color: #1a2a6c;
+    font-size: 1.1rem;
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.next-btn {
+    background-color: #1a2a6c;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.next-btn:hover {
+    background-color: #0d1a4a;
+}
+
+.report-info {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.report-info h2 {
+    color: #1a2a6c;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.info-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info-step {
+    text-align: center;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background-color: #1a2a6c;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+}
+
+@media (max-width: 768px) {
+    .report-header h1 {
+        font-size: 2rem;
+    }
+    
+    .steps-progress {
+        justify-content: space-around;
+    }
+    
+    .step {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+}

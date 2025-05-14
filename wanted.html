@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Nationale - Personnes recherchées</title>
+    <link rel="stylesheet" href="css/wanted.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Même en-tête que index.html -->
+    
+    <main class="wanted-main">
+        <section class="wanted-header">
+            <h1>Personnes recherchées</h1>
+            <p>Si vous avez des informations sur l'une de ces personnes, veuillez contacter immédiatement la police.</p>
+            <div class="wanted-warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <p><strong>Ne tentez pas d'intervenir vous-même.</strong> Certaines personnes peuvent être dangereuses.</p>
+            </div>
+        </section>
+
+        <section class="wanted-filters">
+            <h2>Filtrer les recherches</h2>
+            <div class="filter-options">
+                <select>
+                    <option>Toutes les catégories</option>
+                    <option>Recherche nationale</option>
+                    <option>Enquête criminelle</option>
+                    <option>Disparition inquiétante</option>
+                </select>
+                <select>
+                    <option>Toutes les régions</option>
+                    <option>Île-de-France</option>
+                    <option>Auvergne-Rhône-Alpes</option>
+                    <!-- Autres régions -->
+                </select>
+                <button class="filter-btn">Filtrer</button>
+            </div>
+        </section>
+
+        <section class="wanted-list">
+            <div class="wanted-card">
+                <div class="wanted-image">
+                    <img src="images/wanted1.jpg" alt="Personne recherchée">
+                    <div class="wanted-status critical">Recherche urgente</div>
+                </div>
+                <div class="wanted-info">
+                    <h3>DUBOIS Marc</h3>
+                    <p class="wanted-age">35 ans</p>
+                    <p class="wanted-location">Dernière vue : Paris 15e</p>
+                    <p class="wanted-description">Recherché dans le cadre d'une enquête pour homicide volontaire. Armé et dangereux.</p>
+                    <div class="wanted-contact">
+                        <p>Si vous avez des informations :</p>
+                        <a href="tel:17" class="contact-btn">17 ou 112</a>
+                        <a href="#" class="info-btn">Plus d'informations</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wanted-card">
+                <div class="wanted-image">
+                    <img src="images/wanted2.jpg" alt="Personne recherchée">
+                    <div class="wanted-status major">Disparition inquiétante</div>
+                </div>
+                <div class="wanted-info">
+                    <h3>MARTIN Sophie</h3>
+                    <p class="wanted-age">17 ans</p>
+                    <p class="wanted-location">Disparue à Lyon</p>
+                    <p class="wanted-description">Disparue depuis le 15/05/2023. Portait un jean bleu et un pull rouge.</p>
+                    <div class="wanted-contact">
+                        <p>Si vous avez des informations :</p>
+                        <a href="tel:17" class="contact-btn">17 ou 116 000</a>
+                        <a href="#" class="info-btn">Plus d'informations</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Plus de cartes de personnes recherchées -->
+        </section>
+
+        <section class="wanted-tips">
+            <h2>Conseils si vous reconnaissez une personne recherchée</h2>
+            <ul class="tips-list">
+                <li><i class="fas fa-check-circle"></i> Ne tentez pas d'intervenir vous-même</li>
+                <li><i class="fas fa-check-circle"></i> Notez les détails (heure, lieu, vêtements)</li>
+                <li><i class="fas fa-check-circle"></i> Appelez immédiatement le 17 ou le 112</li>
+                <li><i class="fas fa-check-circle"></i> Suivez les instructions des policiers</li>
+                <li><i class="fas fa-check-circle"></i> Ne diffusez pas l'information sur les réseaux sociaux</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Même pied de page que index.html -->
+</body>
+</html>

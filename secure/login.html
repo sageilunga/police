@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Nationale - Connexion espace agent</title>
+    <link rel="stylesheet" href="../css/secure.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="secure-page">
+    <div class="secure-login-container">
+        <div class="secure-login-header">
+            <img src="..css/image/logo police.jpg" alt="Logo Police Sécurité" class="secure-logo">
+            <h1>ESPACE AGENT</h1>
+            <p>Portail sécurisé de la Police Nationale</p>
+        </div>
+
+        <div class="secure-login-box">
+            <div class="secure-alert">
+                <i class="fas fa-shield-alt"></i>
+                <p>Ce système est classifié. Tout accès non autorisé est passible de poursuites.</p>
+            </div>
+
+            <form class="secure-login-form">
+                <div class="form-group">
+                    <label for="badge">Numéro de badge</label>
+                    <input type="text" id="badge" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" required>
+                </div>
+                <div class="form-options">
+                    <label>
+                        <input type="checkbox"> Se souvenir de moi
+                    </label>
+                    <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                </div>
+                <button type="submit" class="secure-login-btn">
+                    <i class="fas fa-lock"></i> Se connecter
+                </button>
+            </form>
+
+            <div class="secure-login-footer">
+                <p><i class="fas fa-lock"></i> Connexion sécurisée - TLS 1.3</p>
+                <p>Version 3.4.2 - © 2023 Police Nationale</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
