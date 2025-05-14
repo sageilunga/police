@@ -1,35 +1,48 @@
-// Menu mobile
-document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-    document.querySelector('.main-nav').classList.toggle('active');
-});
-
-// Formulaire de signalement - Étapes
-const nextBtn = document.querySelector('.next-btn');
-if (nextBtn) {
-    nextBtn.addEventListener('click', function() {
-        // Validation et passage à l'étape suivante
-        alert('Fonctionnalité à implémenter : validation et passage à l\'étape suivante');
-    });
-}
-
-// Connexion sécurisée
-const loginForm = document.querySelector('.secure-login-form');
-if (loginForm) {
-    loginForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Validation et connexion
-        alert('Fonctionnalité à implémenter : validation et connexion sécurisée');
-    });
-}
-
-// Détection de la taille de l'écran pour ajustements
-function checkScreenSize() {
-    if (window.innerWidth > 992) {
-        document.querySelector('.main-nav').style.display = 'flex';
-    } else {
-        document.querySelector('.main-nav').style.display = 'none';
+// Menu mobile - Version corrigée
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (menuBtn && mainNav) {
+        menuBtn.addEventListener('click', function() {
+            // Basculer la classe 'active' sur le menu
+            mainNav.classList.toggle('active');
+            
+            // Changer l'icône du burger en croix quand ouvert
+            const icon = this.querySelector('i');
+            if (mainNav.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
     }
-}
 
-window.addEventListener('resize', checkScreenSize);
-checkScreenSize();
+    // Fermer le menu lorsqu'on clique sur un lien (optionnel)
+    const navLinks = document.querySelectorAll('.main-nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 992) {
+                mainNav.classList.remove('active');
+                menuBtn.querySelector('i').classList.remove('fa-times');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+            }
+        });
+    });
+
+    // Vérifier la taille de l'écran au chargement et au redimensionnement
+    function checkScreenSize() {
+        if (window.innerWidth > 992) {
+            mainNav.classList.remove('active');
+            if (menuBtn.querySelector('i')) {
+                menuBtn.querySelector('i').classList.remove('fa-times');
+                menuBtn.querySelector('i').classList.add('fa-bars');
+            }
+        }
+    }
+
+    window.addEventListener('resize', checkScreenSize);
+    checkScreenSize();
+});
